@@ -3,7 +3,7 @@ LNCR_EXE=Mint.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21072500/icons.zip
+LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21062500/icons.zip
 LNCR_ZIP_EXE=Mint.exe
 
 all: $(OUT_ZIP)
@@ -18,6 +18,7 @@ ziproot: Launcher.exe rootfs.tar.gz
 	mkdir ziproot
 	cp Launcher.exe ziproot/${LNCR_EXE}
 	cp rootfs.tar.gz ziproot/
+	cp preset.json ziproot/
 
 exe: Launcher.exe
 Launcher.exe: icons.zip
