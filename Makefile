@@ -1,10 +1,10 @@
-OUT_ZIP=Linuxmint.zip
-LNCR_EXE=Mint.exe
+OUT_ZIP=ElementaryWSL.zip
+LNCR_EXE=Elementary.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21062500/icons.zip
-LNCR_ZIP_EXE=Mint.exe
+LNCR_ZIP_URL=https://github.com/sileshn/wsldl/releases/download/20210816/icons.zip
+LNCR_ZIP_EXE=Elementary.exe
 
 all: $(OUT_ZIP)
 
@@ -18,7 +18,6 @@ ziproot: Launcher.exe rootfs.tar.gz
 	mkdir ziproot
 	cp Launcher.exe ziproot/${LNCR_EXE}
 	cp rootfs.tar.gz ziproot/
-	cp preset.json ziproot/
 
 exe: Launcher.exe
 Launcher.exe: icons.zip
@@ -44,9 +43,9 @@ rootfs: base.tar
 
 base.tar:
 	@echo -e '\e[1;31mExporting base.tar using docker...\e[m'
-	docker run --name mintwsl linuxmintd/mint20.2-amd64 /bin/bash -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; apt-get update; apt-get full-upgrade -y -q; apt-get install -y -q apt-transport-https apt-utils aria2 bash-completion build-essential ca-certificates curl dialog htop software-properties-common tree; ip link set dev eth0 mtu 1500; unminimize; apt-get autoremove -y; apt-get clean;"
-	docker export --output=base.tar mintwsl
-	docker rm -f mintwsl
+	docker run --name elementarywsl --net=host elementary/docker:odin-unstable /bin/bash -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; apt-get update; apt-get full-upgrade -y -q; apt-get install -y -q apt-transport-https apt-utils iproute2 aria2 bash-completion build-essential ca-certificates curl dialog htop lsof software-properties-common sudo tree; ip link set dev eth0 mtu 1500; unminimize; apt-get autoremove -y; apt-get clean;"
+	docker export --output=base.tar elementarywsl
+	docker rm -f elementarywsl
 
 clean:
 	@echo -e '\e[1;31mCleaning files...\e[m'
@@ -57,4 +56,4 @@ clean:
 	-rm rootfs.tar.gz
 	-sudo rm -r rootfs
 	-rm base.tar
-	-docker rmi linuxmintd/mint20.2-amd64
+	-docker rmi elementary/docker:odin-unstable
