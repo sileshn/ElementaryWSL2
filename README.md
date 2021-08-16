@@ -1,10 +1,10 @@
-# LinuxmintWSL
-Linuxmint on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
+# ElementaryWSL
+ElementaryOS on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
 [![Screenshot-2021-06-16-205341.png](https://i.postimg.cc/qqxZSBVk/Screenshot-2021-06-16-205341.png)](https://postimg.cc/wR3VspjP)
-[![Github All Releases](https://img.shields.io/github/downloads/sileshn/LinuxmintWSL/total.svg?style=flat-square)](https://github.com/sileshn/LinuxmintWSL/releases)
+[![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![License](https://img.shields.io/github/license/sileshn/LinuxmintWSL.svg?style=flat-square)](https://raw.githubusercontent.com/sileshn/LinuxmintWSL/main/LICENSE)
+[![License](https://img.shields.io/github/license/sileshn/ElementaryWSL.svg?style=flat-square)](https://raw.githubusercontent.com/sileshn/ElementaryWSL/main/LICENSE)
 
 ## 💻 Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
@@ -23,19 +23,19 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 For more details, check [this](https://docs.microsoft.com/en-us/windows/wsl/install-win10) microsoft document.
 
 ## Install
-1. [Download](https://github.com/sileshn/LinuxmintWSL/releases/latest) installer zip
+1. [Download](https://github.com/sileshn/ElementaryWSL/releases/latest) installer zip
 2. Extract all files in zip file to same directory
-3. Run Mint.exe to Extract rootfs and Register to WSL
+3. Run Elementary.exe to Extract rootfs and Register to WSL
 
 **Note:**
 Exe filename is using the instance name to register. If you rename it you can register with a diffrent name and have multiple installs.
 
 If you want to use WSL2 after install, convert it with the following command.
 ```dos
-wsl --set-version Mint 2
+wsl --set-version Elementary 2
 ```
 
-You can also set wsl2 as default. Use the command below before running Mint.exe.
+You can also set wsl2 as default. Use the command below before running Elementary.exe.
 ```dos
 wsl --set-default-version 2
 ```
@@ -112,21 +112,21 @@ Usage :
 
 ## How to setup
 
-Open Mint.exe and run the following commands.
+Open Elementary.exe and run the following commands.
 ```dos
 passwd
 useradd -m -s /bin/bash <username>
 passwd <username>
 exit
 ```
-Execute the command below in a windows cmd terminal from the directory where Mint.exe is installed.
+Execute the command below in a windows cmd terminal from the directory where Elementary.exe is installed.
 ```dos
->Mint.exe config --default-user <username>
+>Elementary.exe config --default-user <username>
 ```
 
 ## How to uninstall instance
 ```dos
->Mint.exe clean
+>Elementary.exe clean
 
 ```
 
@@ -137,18 +137,18 @@ Execute the command below in a windows cmd terminal from the directory where Min
 Docker, tar, zip, unzip need to be installed.
 
 ```dos
-git clone git@gitlab.com:sileshn/LinuxmintWSL.git
-cd LinuxmintWSL
+git clone git@gitlab.com:sileshn/ElementaryWSL.git
+cd ElementaryWSL
 make
 
 ```
-Copy the Linuxmint.zip file to a safe location and run the command below to clean.
+Copy the ElementaryWSL.zip file to a safe location and run the command below to clean.
 ```dos
 make clean
 
 ```
 
-## How to run docker in LinuxmintWSL without using docker desktop.
+## How to run docker in ElementaryWSL without using docker desktop.
 
 Delete older versions of docker if installed.
 ```dos
