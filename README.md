@@ -1,7 +1,7 @@
 # ElementaryWSL
 ElementaryOS on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
-[![Screenshot-2021-06-16-205341.png](https://i.postimg.cc/qqxZSBVk/Screenshot-2021-06-16-205341.png)](https://postimg.cc/wR3VspjP)
+[![Screenshot-2021-08-16-134253.png](https://i.postimg.cc/9ftx8cN8/Screenshot-2021-08-16-134253.png)](https://postimg.cc/06jdr1vD)
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/sileshn/ElementaryWSL.svg?style=flat-square)](https://raw.githubusercontent.com/sileshn/ElementaryWSL/main/LICENSE)
