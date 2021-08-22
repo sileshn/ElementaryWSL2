@@ -3,7 +3,7 @@ LNCR_EXE=Elementary.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21082200/icons.zip
+LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21082201/icons.zip
 LNCR_ZIP_EXE=Elementary.exe
 
 all: $(OUT_ZIP)
