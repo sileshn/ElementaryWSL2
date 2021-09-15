@@ -56,4 +56,4 @@ clean:
 	-rm rootfs.tar.gz
 	-sudo rm -r rootfs
 	-rm base.tar
-	-docker rmi elementary/docker:odin-unstable
+	-docker rmi -f elementary/docker:odin-unstable
