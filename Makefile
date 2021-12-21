@@ -43,7 +43,7 @@ rootfs: base.tar
 
 base.tar:
 	@echo -e '\e[1;31mExporting base.tar using docker...\e[m'
-	docker run --name elementarywsl --net=host elementary/docker:odin-stable /bin/bash -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; apt-get update; apt-get install -y -q apt-utils; apt-get full-upgrade -y -q; apt-get install -y -q apt-transport-https iproute2 aria2 bash-completion build-essential ca-certificates curl dialog htop lsof software-properties-common sudo tree; ip link set dev eth0 mtu 1500; unminimize; apt-get autoremove -y; apt-get clean;"
+	docker run --name elementarywsl --net=host elementary/docker:stable /bin/bash -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections; apt-get update; apt-get install -y -q apt-utils; apt-get full-upgrade -y -q; apt-get install -y -q apt-transport-https iproute2 aria2 bash-completion build-essential ca-certificates curl dialog htop lsof software-properties-common sudo tree; ip link set dev eth0 mtu 1500; unminimize; apt-get autoremove -y; apt-get clean;"
 	docker export --output=base.tar elementarywsl
 	docker rm -f elementarywsl
 
@@ -56,4 +56,4 @@ clean:
 	-rm rootfs.tar.gz
 	-sudo rm -r rootfs
 	-rm base.tar
-	-docker rmi -f elementary/docker:odin-stable
+	-docker rmi -f elementary/docker:stable
