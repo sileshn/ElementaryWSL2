@@ -124,6 +124,18 @@ useradd -m -s /bin/bash <username>
 passwd <username>
 exit
 ```
+
+You can set the user you created as default user using 2 methods.
+
+Open Elementary.exe, run the following command (replace username with the actual username you created).
+```dos
+sed -i '/\[user\]/a default = username' /etc/wsl.conf
+```
+
+Shutdown and restart the distro (this step is important).
+
+(or)
+
 Execute the command below in a windows cmd terminal from the directory where Elementary.exe is installed.
 ```dos
 >Elementary.exe config --default-user <username>
