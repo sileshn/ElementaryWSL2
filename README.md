@@ -5,7 +5,10 @@ ElementaryOS on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.c
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ElementaryWSL.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/blob/main/LICENSE)
 
-## 💻 Requirements
+## Important information
+ElementaryWSL includes a wsl.conf file which only has section headers. Users can use this to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
+
+## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
 * Builds lower than 18362 do not support WSL 2.
