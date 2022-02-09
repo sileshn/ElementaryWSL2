@@ -117,7 +117,7 @@ Usage :
 
 ## How to setup
 
-Open Elementary.exe and run the following commands.
+ElementaryWSL will ask you to create a new user during its first run. If you chose to create a new user during initial setup, the steps below are not required unless you want to create additional users.
 ```dos
 passwd
 useradd -m -s /bin/bash <username>
