@@ -10,7 +10,7 @@ txtrst=$(tput sgr0)
 
 test -f /mnt/c/Users/Public/vhdresize.txt && rm /mnt/c/Users/Public/vhdresize.txt
 test -f ~/vhdresize.txt && rm ~/vhdresize.txt
-figlet -t -k -f /usr/share/figlet/mini.flf "Welcome to ElementaryWSL"
+figlet -t -k -f /usr/share/figlet/mini.flf "Welcome to ElementaryWSL" | lolcat
 echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\n\033[0m"
 
 diskvol=$(mount | grep -m1 ext4 | cut -f 1 -d " ")
