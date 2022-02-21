@@ -49,7 +49,7 @@ if [ $disksize -le 263174212 ]; then
                             echo -en "\033[1A\033[1A\033[2K"
                             vhdsize=0
                         else
-							echo -en "\033[1B\033[1A\033[2K"
+                            echo -en "\033[1B\033[1A\033[2K"
                             echo "expand vdisk maximum=$vhdsize" | sudo tee -a ~/vhdresize.txt >/dev/null
                             cp ~/vhdresize.txt /mnt/c/Users/Public
                             break
@@ -63,10 +63,11 @@ if [ $disksize -le 263174212 ]; then
                 secs=5
                 echo " "
                 while [ $secs -gt 0 ]; do
-                    printf ${ylw}"\r\033[KDiskpart will launch and resize your VHD in %.d seconds. This window will close after diskpart launches."${txtrst} $((secs--))
+                    printf ${ylw}"\r\033[KThis window will close when diskpart launches to resize your VHD in %.d seconds."${txtrst} $((secs--))
                     sleep 1
                 done
-                powershell.exe -Command "Start-Process -Verb RunAs 'diskpart.exe' -ArgumentList '/s C:\Users\Public\vhdresize.txt'" && wsl.exe --shutdown $WSL_DISTRO_NAME
+                powershell.exe -command "Start-Process -Verb RunAs 'diskpart.exe' -ArgumentList '/s C:\Users\Public\vhdresize.txt' -WindowStyle Hidden"
+                wsl.exe --shutdown $WSL_DISTRO_NAME
                 ;;
             Nope)
                 break
