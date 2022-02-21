@@ -5,7 +5,11 @@ ElementaryOS on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.c
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ElementaryWSL.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/blob/main/LICENSE)
 
-## Important information
+## Features and important information
+ElementaryWSL has the following features during the installation stage.
+* Increase virtual disk size from the default 256GB
+* Create a new user and set the user as default
+
 ElementaryWSL includes a wsl.conf file which only has section headers. Users can use this to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 
 ## Requirements
