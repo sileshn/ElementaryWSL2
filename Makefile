@@ -1,4 +1,4 @@
-OUT_ZIP=ElementaryWSL.zip
+OUT_ZIP=ElementaryWSL2.zip
 LNCR_EXE=Elementary.exe
 
 DLR=curl

@@ -1,16 +1,16 @@
-# ElementaryWSL
+# ElementaryWSL2
 ElementaryOS on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
 <a href='http://postimg.cc/F7frFqKM' target='_blank'><img src='https://i.postimg.cc/F7frFqKM/Screenshot-2022-02-21-143117.png' border='0' alt='Screenshot-2022-02-21-143117'/></a> <a href='http://postimg.cc/gnfYxDXn' target='_blank'><img src='https://i.postimg.cc/gnfYxDXn/Screenshot-2022-02-21-143140.png' border='0' alt='Screenshot-2022-02-21-143140'/></a> <a href='http://postimg.cc/WqTZcVjc' target='_blank'><img src='https://i.postimg.cc/WqTZcVjc/Screenshot-2022-02-21-153546.png' border='0' alt='Screenshot-2022-02-21-153546'/></a> <a href='http://postimg.cc/2LGZzt8b' target='_blank'><img src='https://i.postimg.cc/2LGZzt8b/Screenshot-2022-02-21-153617.png' border='0' alt='Screenshot-2022-02-21-153617'/></a> <a href='http://postimg.cc/GBjrSnMy' target='_blank'><img src='https://i.postimg.cc/GBjrSnMy/Screenshot-2022-02-21-143427.png' border='0' alt='Screenshot-2022-02-21-143427'/></a> <a href='http://postimg.cc/zLJvXp4K' target='_blank'><img src='https://i.postimg.cc/zLJvXp4K/Screenshot-2022-02-17-125952.png' border='0' alt='Screenshot-2022-02-17-125952'/></a> <a href='http://postimg.cc/yJvdJcz5' target='_blank'><img src='https://i.postimg.cc/yJvdJcz5/Screenshot-2022-02-17-130012.png' border='0' alt='Screenshot-2022-02-17-130012'/></a> <a href='http://postimg.cc/2qFW01NF' target='_blank'><img src='https://i.postimg.cc/2qFW01NF/Screenshot-2022-02-17-125117.png' border='0' alt='Screenshot-2022-02-17-125117'/></a>
-[![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/releases)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ElementaryWSL.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL/blob/main/LICENSE)
+[![Github All Releases](https://img.shields.io/github/downloads/sileshn/ElementaryWSL2/total.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL2/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ElementaryWSL2.svg?style=flat-square)](https://github.com/sileshn/ElementaryWSL2/blob/main/LICENSE)
 
 ## Features and important information
-ElementaryWSL has the following features during the installation stage.
+ElementaryWSL2 has the following features during the installation stage.
 * Increase virtual disk size from the default 256GB
 * Create a new user and set the user as default
 
-ElementaryWSL includes a wsl.conf file which only has section headers. Users can use this to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
+ElementaryWSL2 includes a wsl.conf file which only has section headers. Users can use this to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
@@ -33,7 +33,7 @@ ElementaryWSL includes a wsl.conf file which only has section headers. Users can
 
 ## Install
 * Make sure all the steps mentioned under "Requirements" are completed.
-* [Download](https://github.com/sileshn/ElementaryWSL/releases/latest) installer zip
+* [Download](https://github.com/sileshn/ElementaryWSL2/releases/latest) installer zip
 * Extract all files in zip file to same directory
 * Set version 2 as default. Note that this step is required only for manual installation.
   ```dos
@@ -119,7 +119,7 @@ Usage :
 
 ## How to setup
 
-ElementaryWSL will ask you to create a new user during its first run. If you chose to create a new user during initial setup, the steps below are not required unless you want to create additional users.
+ElementaryWSL2 will ask you to create a new user during its first run. If you chose to create a new user during initial setup, the steps below are not required unless you want to create additional users.
 ```dos
 passwd
 useradd -m -g users -G sudo -s /bin/bash <username>
@@ -189,18 +189,18 @@ You may need to run the command below in some circumstances.
 Docker, tar, zip, unzip, bsdtar need to be installed.
 
 ```dos
-git clone git@gitlab.com:sileshn/ElementaryWSL.git
-cd ElementaryWSL
+git clone git@gitlab.com:sileshn/ElementaryWSL2.git
+cd ElementaryWSL2
 make
 
 ```
-Copy the ElementaryWSL.zip file to a safe location and run the command below to clean.
+Copy the ElementaryWSL2.zip file to a safe location and run the command below to clean.
 ```dos
 make clean
 
 ```
 
-## How to run docker in ElementaryWSL without using docker desktop.
+## How to run docker in ElementaryWSL2 without using docker desktop.
 
 Delete older versions of docker if installed.
 ```dos
